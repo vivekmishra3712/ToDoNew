@@ -12,4 +12,4 @@ jobs:
           echo "name=Max" >> "$GITHUB_OUTPUT"
       - name: Use Workflow Variable
         run: |
-          echo "Workflow Variable Value: ${{ steps.set_var.outputs.name }}"
+          echo "Workflow Variable Value: ${{ vars.DEBUG }}"
