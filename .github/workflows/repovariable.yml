@@ -1,3 +1,5 @@
+name: 08-05-Variables
+
 on:
   workflow_dispatch:
 
