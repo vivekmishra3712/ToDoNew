@@ -1,3 +1,4 @@
+name: 08-04-Contexts - Outputs
 on:
   workflow_dispatch:
 
