@@ -1,20 +1,15 @@
-name: 08-03-Contexts - Inputs
-
 on:
   workflow_dispatch:
-    inputs:
-      somevalue:
-        type: string
-      debug:
-        type: boolean
-        default: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Use Workflow Input
+      - name: Define Workflow Variable
+        id: set_var
         run: |
-          echo "DEBUG: ${{ inputs.debug }}"
-           echo "DEBUG: ${{ inputs.somevalue }}"
-          
+          echo "Setting Workflow Variable"
+          echo "name=Max" >> "$GITHUB_OUTPUT"
+      - name: Use Workflow Variable
+        run: |
+          echo "Workflow Variable Value: ${{ steps.set_var.outputs.name }}"
