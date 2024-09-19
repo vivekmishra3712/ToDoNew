@@ -1,0 +1,12 @@
+name: 07-01-Event Filters and Activity Types
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    branches:
+      - main
+
+jobs:
+  echo:
